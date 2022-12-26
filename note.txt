@@ -1,0 +1,128 @@
+   Server Creation
+  .................
+
+  basic steps - :
+          1 . install express [command - npm i express]
+          2 . import express
+          3 . create an app using express
+          4 . create port number to run server  (3000 series number) / [angular works on 4000 series number]
+          5 . create requests according to our project
+    
+
+    nodemon server
+   ................
+
+   steps - 
+        1. npm i -g nodemon [-g aanel global ayit ayirikum] 
+
+        User Authentification Using express
+      ......................................
+
+JWT token :used for user authentification using express
+
+J :json
+W :web
+T :token
+
+      library : "jsonwebtoken"
+      method : "sign()" - for generating tokens
+      installing command : "npm i jsonwebtoken"
+      method - verify() :- method to verify jwt tokens
+
+   Middlewares
+  .............
+
+* they have the capacity to control server request
+* it is a function with 3 arguements -
+1. request
+2. response
+3. next
+
+-: 2 types Middlewares :-
+
+      1. Application Specific Middlewares 
+
+    .  first work cheyunna Middleware aayrikum
+
+      2. Router Specific Middlewares
+
+    .  chela Specific works cheyan vendi use cheyunna Middleware
+
+
+      Solving Runtime Errors in JS
+     ..............................
+
+* try catch - 
+      try {
+            error causing code
+      }
+
+      catch{
+            solution
+      }
+
+      MongoDB  - unstructured data
+    ...........
+
+    . structured data :feild empty avan padilla 
+
+    . unstructured data :empty ayalum kozhpola
+
+    must install mongodb server for using mongodb
+
+    commands using shell :-
+   ........................
+      1. to see the databases :
+      
+      -> "show dbs"
+
+      2. to open databases :
+      
+      -> "use database_name"
+
+      3. to view collections inside database :
+      
+      -> "show collections"
+
+      4. to view datas inside collections :
+      
+      -> "db.collection_name.find()"
+
+      5. to view any single data inside collections :
+      
+      -> "db.collection_name.findOne({unqiue object to find the data to identify})"
+
+      6. to insert new data :
+      
+      -> "db.collection_name.insertOne({data})"
+
+      7. to view a single data according to a condition :
+
+      -> "db.collection_name.find({condition})" // all datas
+      -> "db.collection_name.findOne({condition})" // single data
+
+      8.to delete :
+            *a single data
+
+            ->"db.collection_name.deleteOne({unique data})"  //delete count number ayirikum. appo onnude delete cheytha delete count zero ayirikum
+
+      9.update :
+
+     -> "db.collection_name.updateOne({data to be updated} , {new data})
+                                          {uname:'anu'}  {uname:'anu v'}
+
+     " crud - create read update delete "
+
+      server mongodb integretion
+     ............................
+
+     "mongoose" - library uesd for server and database integretion
+
+     installing -"npm i mongoose"
+
+ 4 steps :-
+ 
+  1. import mongoose
+  2. state connection string via mongoose
+  3. define a bank database Model 
+  4. export the schema to use in another files
